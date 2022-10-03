@@ -29,6 +29,7 @@ public:
                     st.push(x);
                 }
             }
+          
         }
     }
 };
@@ -41,6 +42,6 @@ int main()
     gr.Addedge(2, 5);
     gr.Addedge(5, 6);
     gr.DFS(1);
-    gr.DFS(4);
+    // gr.DFS(4);
     return 0;
 }

@@ -31,6 +31,7 @@ void Cycle_helper(T src,map<T,bool> &visitied,map<T,bool> &path)
       {
         T node = st.top();
         visitied[node]=true;
+       
         for(auto nbr:gr[node])
         {
           if(!visitied[nbr])
@@ -44,7 +45,6 @@ void Cycle_helper(T src,map<T,bool> &visitied,map<T,bool> &path)
           }
           
         }
-        
         path[node]=false;
         st.pop();
       }
@@ -62,7 +62,7 @@ int main()
   gr.Addedge(1,2);
   gr.Addedge(2,3);
   gr.Addedge(3,4);
-  gr.Addedge(4,7);
+  gr.Addedge(4,2);
   gr.Addedge(4,5); 
   gr.Addedge(5,6);
   gr.Cycle_Check();
